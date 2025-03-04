@@ -1,0 +1,13 @@
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 0;
+  }
+  .fade.show {
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 1;
+  }
