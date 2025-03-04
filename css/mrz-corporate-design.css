@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Academica;
+  src: url(../fonts/AcademicaText.otf);
+}
+
+@font-face {
+  font-family: Akkurat;
+  src: url(../fonts/AkkuratLLWeb-Regular.woff2);
+}
+
+@font-face {
+  font-family: Akkurat-Bold;
+  src: url(../fonts/AkkuratLLWeb-Bold.woff2);
+}
+
+@font-face {
+  font-family: Akkurat Mono;
+  src: url(../fonts/AkkuratMonoLL-Regular.otf);
+}
+
+:root {
+  /*COLORS*/
+  --main-primary: #000000;
+  --main-secondary: #a0a0a0;
+  --main-info: #17a2b8;
+  --main-success: #28a745;
+  --main-warning: #ffc107;
+  --main-error: #b65332;
+  --main-light: #f8f9fa;
+  --shades-black-1: #101010;
+  --shades-black-2: #1d1d1d;
+  --shades-black-3: #282828;
+  --shades-grey-1: #333333;
+  --shades-grey-2: #4f4f4f;
+  --shades-grey-3: #828282;
+  --shades-grey-4: #bdbdbd;
+  --shades-grey-5: #e0e0e0;
+  --shades-white: #ffffff;
+  --screen-white: #f5f5f5;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Typography */
+h1 {
+  font-family: "Academica";
+  font-size: 60px;
+  line-height: 60px; /* 100% */
+  letter-spacing: -0.8px;
+}
+
+h3 {
+  font-family: "Akkurat-Bold";
+  font-size: 24px;
+  font-style: normal;
+  line-height: 30px; /* 125% */
+  letter-spacing: -0.8px;
+}
+
+/* Buttons */
+.mrz-button-xl {
+  display: inline-flex;
+  padding: 32px 64px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  /* border: 4px solid var(--main-primary, #000); */
+  border: none;
+  background: var(--screen-white, #f5f5f5);
+  color: var(--main-primary, #000);
+  gap: 32px;
+}
+
+.mrz-button-xl-text {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Akkurat";
+  font-size: 60px;
+  font-style: normal;
+  line-height: 1;
+  color: inherit;
+}

@@ -1,0 +1,132 @@
+:root {
+  /*COLORS*/
+  --shopWall-beige: hsla(36, 16%, 61%, 1);
+
+  /*TYPE-SIZES*/
+  --TypeSizes-Large: 48px;
+  --TypeSizes-Normal: 24px;
+  --LetterSpacing-Wide: 2px;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  background: var(--shopWall-beige);
+}
+
+/* main {
+display: flex;
+width: 7680px;
+height: 1080px;
+align-items: flex-start;
+} */
+
+/*Signage section*/
+
+#signage {
+  z-index: -1000;
+  display: flex;
+  width: 7680px;
+  height: 1080px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/*Typography*/
+
+.signaletik {
+  font-family: "Akkurat";
+  font-size: var(--TypeSizes-Large, 48px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--TypeSizes-Large, 48px); /* 100% */
+  letter-spacing: var(--LetterSpacing-Wide, 2px);
+  text-transform: uppercase;
+}
+
+h5 {
+    font-family: "Akkurat";
+font-size: var(--TypeSizes-Normal, 24px);
+font-style: normal;
+font-weight: 400;
+line-height: var(--TypeSizes-Normal, 24px); /* 100% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+/*Signage container classes*/
+
+.signageComp {
+  display: flex;
+  width: 960px;
+  height: 1080px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* .signageTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+} */
+
+.signageEntry {
+  display: flex;
+  width: 960px;
+  padding: 36px;
+  align-items: center;
+  gap: 32px;
+}
+
+.signageEntryRight{
+   
+justify-content: flex-end;
+align-items: flex-start;
+
+}
+
+.signageSymbols {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.signageTriangle {
+  display: flex;
+  width: 67px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.signageIcon {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 3px solid var(--main-primary, #000);
+}
+
+.signageText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.signageTextTitle, .signageTextPlace {
+  color: var(--Main-Color---Primary, #000);
+  text-box-trim: trim-both; /*supported from Chrome 133*/
+  text-box-edge: cap; /*supported from Chrome 133*/
+}
