@@ -1,4 +1,6 @@
 :root {
+box-sizing: border-box;
+
   /*COLORS*/
   --shopWall-beige: hsla(36, 16%, 61%, 1);
 
@@ -9,8 +11,8 @@
 }
 
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -48,13 +50,17 @@ align-items: flex-start;
 }
 
 h5 {
-    font-family: "Akkurat";
-font-size: var(--TypeSizes-Normal, 24px);
-font-style: normal;
-font-weight: 400;
-line-height: var(--TypeSizes-Normal, 24px); /* 100% */
-letter-spacing: 2px;
-text-transform: uppercase;
+  font-family: "Akkurat";
+  font-size: var(--TypeSizes-Normal, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--TypeSizes-Normal, 24px); /* 100% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.textRight {
+    text-align: right;
 }
 
 /*Signage container classes*/
@@ -67,6 +73,10 @@ text-transform: uppercase;
   justify-content: space-between;
   align-items: flex-start;
   flex-shrink: 0;
+}
+
+.signageCompRight {
+    align-items: flex-end;
 }
 
 /* .signageTop {
@@ -84,11 +94,9 @@ text-transform: uppercase;
   gap: 32px;
 }
 
-.signageEntryRight{
-   
-justify-content: flex-end;
-align-items: flex-start;
-
+.signageEntryRight {
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .signageSymbols {
@@ -125,7 +133,12 @@ align-items: flex-start;
   gap: 16px;
 }
 
-.signageTextTitle, .signageTextPlace {
+.signageTextRight {
+    align-items: flex-end;
+}
+
+.signageTextTitle,
+.signageTextPlace {
   color: var(--main-primary, #000);
   text-box-trim: trim-both; /*supported from Chrome 133*/
   text-box-edge: cap; /*supported from Chrome 133*/
