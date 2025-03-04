@@ -65,6 +65,16 @@ h5 {
 
 /*Signage container classes*/
 
+.zeroGap
+{
+    gap: 0 !important;
+}
+
+.noBorders{
+    border: 0 !important;
+}
+
+
 .signageComp {
   display: flex;
   width: 960px;
@@ -96,7 +106,6 @@ h5 {
 
 .signageEntryRight {
   justify-content: flex-end;
-  align-items: flex-start;
 }
 
 .signageSymbols {
