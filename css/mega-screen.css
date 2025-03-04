@@ -126,7 +126,7 @@ align-items: flex-start;
 }
 
 .signageTextTitle, .signageTextPlace {
-  color: var(--Main-Color---Primary, #000);
+  color: var(--main-primary, #000);
   text-box-trim: trim-both; /*supported from Chrome 133*/
   text-box-edge: cap; /*supported from Chrome 133*/
 }
