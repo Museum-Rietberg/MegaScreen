@@ -37,6 +37,17 @@ align-items: flex-start;
   justify-content: space-between;
 }
 
+#changingContent {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    display: flex;
+    width: 7680px;
+    height: 1080px;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
 /*Typography*/
 
 .signaletik {
@@ -112,12 +123,18 @@ h5 {
   display: flex;
   align-items: center;
   gap: 8px;
-  align-self: stretch;
+  align-self: center;
+}
+
+.signageSymbolsVertical {
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .signageTriangle {
   display: flex;
-  width: 67px;
+  width: 64px;
+  height: 64px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -151,4 +168,11 @@ h5 {
   color: var(--main-primary, #000);
   text-box-trim: trim-both; /*supported from Chrome 133*/
   text-box-edge: cap; /*supported from Chrome 133*/
+}
+
+
+/*changing Content container classes*/
+
+.slideContent {
+
 }
