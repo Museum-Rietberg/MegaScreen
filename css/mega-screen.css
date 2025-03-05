@@ -26,7 +26,7 @@ height: 1080px;
 align-items: flex-start;
 } */
 
-/*Signage section*/
+/*Sections*/
 
 #signage {
   z-index: -1000;
@@ -156,7 +156,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
+  gap: 8px;
 }
 
 .signageTextRight {
