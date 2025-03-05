@@ -178,6 +178,12 @@ h5 {
   width: 888px;
 }
 
+.signageTextPlace{
+  position: relative;
+  width: 888px;
+  height: 16px
+}
+
 .signageTextTitle.twoLines
 {
   position: relative;

@@ -153,7 +153,9 @@
           <div class="signageEntry signageEntryRight">
             <div class="signageText signageTextRight">
               <div class="signageTextPlace">
-                <h5 class="textRight">Eintritt nur mit gültigem Ticket</h5>
+                <h5 class="textRight fade content-de">Eintritt nur mit gültigem Ticket</h5>
+                <h5 class="textRight fade content-en">Entry with valid ticket only</h5>
+                <h5 class="textRight fade content-fr">Accès uniquement avec un ticket valide</h5>
               </div>
             </div>
             <div class="signageSymbols zeroGap">
@@ -201,7 +203,7 @@
 <script>
   let currentIndex = 0;
   const languages = ['content-de', 'content-en', 'content-fr'];
-  const duration = 5000; // 1 minute
+  const duration = 60000; // [ms] 60000 = 1 minute
 
   function showNextLanguage() {
     const currentElements = document.getElementsByClassName(languages[currentIndex]);
