@@ -11,3 +11,9 @@
     transition: opacity 1s;
     z-index: 1;
   }
+
+  .fade.textRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }  

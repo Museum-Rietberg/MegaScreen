@@ -170,16 +170,26 @@ h5 {
   text-box-edge: cap; /*supported from Chrome 133*/
 }
 
-/* sketch for replacing text items, works only on single-line signage content on the left
+/* sketch for replacing text items*/
 .signageTextTitle
 {
   position: relative;
-  height: var(--TypeSizes-Large);
-}*/
+  height: 48px;
+  width: 888px;
+}
+
+.signageTextTitle.twoLines
+{
+  position: relative;
+  height: 96px;
+  width: 888px;
+}
 
 
 /*changing Content container classes*/
 
-/* .slideContent {
-
-} */
+.slideContent {
+ position: fixed;
+ top: 0;
+ left: 960px;
+}
