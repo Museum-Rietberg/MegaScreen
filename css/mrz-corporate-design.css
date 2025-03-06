@@ -1,21 +1,21 @@
 @font-face {
   font-family: Academica;
-  src: url(../fonts/AcademicaText.otf);
+  src: url(https://michael.koritschan.com/2025/megascreen/fonts/AcademicaText.otf);
 }
 
 @font-face {
   font-family: Akkurat;
-  src: url(../fonts/AkkuratLLWeb-Regular.woff2);
+  src: url(https://michael.koritschan.com/2025/megascreen/fonts/AkkuratLLWeb-Regular.woff2);
 }
 
 @font-face {
   font-family: Akkurat-Bold;
-  src: url(../fonts/AkkuratLLWeb-Bold.woff2);
+  src: url(https://michael.koritschan.com/2025/megascreen/fonts/AkkuratLLWeb-Bold.woff2);
 }
 
 @font-face {
   font-family: Akkurat Mono;
-  src: url(../fonts/AkkuratMonoLL-Regular.otf);
+  src: url(https://michael.koritschan.com/2025/megascreen/fonts/AkkuratMonoLL-Regular.otf);
 }
 
 :root {
