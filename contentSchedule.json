@@ -1,0 +1,52 @@
+{
+  "config": {
+    "cycleDuration": 180000
+  },
+  "contents": [
+    {
+      "id": "MitLiebeZumDetail-6U",
+      "schedule": [
+        {
+          "start": "2025-03-05T00:00:00",
+          "end": "2025-03-20T00:00:00"
+        }
+      ],
+      "content": {
+        "image": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Image.jpg",
+        "de": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-DE.svg",
+        "en": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-EN.svg",
+        "fr": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-FR.svg"
+      }
+    },
+    {
+      "id": "Hallyu-4U-MzD-2U",
+      "schedule": [
+        {
+          "start": "2025-03-05T00:00:00",
+          "end": "2025-03-20T00:00:00"
+        }
+      ],
+      "content": {
+        "image": "img/slides/test-slide--Hallyu-4U-MzD-2U.png",
+        "de": "",
+        "en": "",
+        "fr": ""
+      }
+    },
+    {
+      "id": "Hallyu-6U",
+      "schedule": [
+        {
+          "start": "2025-03-05T00:00:00",
+          "end": "2025-03-20T00:00:00"
+        }
+      ],
+      "content": {
+        "image": "img/slides/test-slide--Hallyu-6U.png",
+        "de": "",
+        "en": "",
+        "fr": ""
+      }
+    }
+  ]
+}

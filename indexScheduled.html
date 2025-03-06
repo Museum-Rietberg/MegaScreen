@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow">
+    
     <title>MegaScreen</title>
 
     <link rel="shortcut icon" href="#" />
@@ -10,6 +12,10 @@
     <link rel="stylesheet" href="css/mrz-corporate-design.css" />
     <link rel="stylesheet" href="css/mega-screen.css" />
     <link rel="stylesheet" href="css/mega-screen-animation.css">
+
+    <script src="js/languageSwitcher.js"></script>
+    <script src="js/contentManager.js"></script>
+
   </head>
   <body>
     <main>
@@ -191,51 +197,32 @@
             </div>
           </div>
         </div>
+      </section>
       <section id="changingContent"><div class="slideContent">
   <img src="img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Image.jpg" alt="">
         <img class="fade content-de" src="img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-DE.svg" alt="">
         <img class="fade content-en" src="img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-EN.svg" alt="">
         <img class="fade content-fr" src="img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-FR.svg" alt="">
       </div></section>
-    </section>
-
 </main>
 <script>
-  let currentIndex = 0;
-  const languages = ['content-de', 'content-en', 'content-fr'];
-  const duration = 60000; // [ms] 60000 = 1 minute
+  
 
-  function showNextLanguage() {
-    const currentElements = document.getElementsByClassName(languages[currentIndex]);
-    for (let i = 0; i < currentElements.length; i++) {
-      currentElements[i].classList.remove('show');
-    }
-    currentIndex = (currentIndex + 1) % languages.length;
-    const nextElements = document.getElementsByClassName(languages[currentIndex]);
-    for (let i = 0; i < nextElements.length; i++) {
-      nextElements[i].classList.add('show');
-    }
-  }
+  // Initialize scripts
+  document.addEventListener('DOMContentLoaded', async function() {
+  // Initialize ContentManager first
+  const contentManager = new ContentManager();
+  await contentManager.init(); // Assuming we add an init method that returns a promise
 
+  // Then handle language classes
   const initialElements = document.getElementsByClassName(languages[currentIndex]);
   for (let i = 0; i < initialElements.length; i++) {
     initialElements[i].classList.add('show');
   }
+  
+  // Start language rotation
   setInterval(showNextLanguage, duration);
-
-  function checkTime() {
-    const now = new Date();
-    const start = new Date('2025-03-05T16:06:00');
-    const end = new Date('2025-03-05T16:08:00');
-
-    if (now >= start && now <= end) {
-      document.getElementById('changingContent').style.display = 'none';
-    } else {
-      document.getElementById('changingContent').style.display = 'block';
-    }
-  }
-
-  setInterval(checkTime, 1000);
+});
 
 </script>
   </body>
