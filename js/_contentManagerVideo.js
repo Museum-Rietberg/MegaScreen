@@ -19,7 +19,7 @@ class ContentManager {
 
     async loadSchedule() {
         try {
-            const response = await fetch('content/scheduledContent.json');
+            const response = await fetch('contentSchedule.json');
             const data = await response.json();
             this.schedule = data.contents;
             this.cycleDuration = data.config?.cycleDuration || this.cycleDuration;
@@ -34,16 +34,33 @@ class ContentManager {
 
     initializeContent() {
         const container = document.getElementById('changingContent');
-        container.innerHTML = this.schedule.map(item => `
+        container.innerHTML = this.schedule.map(item => {
+            if (item.type === 'video') {
+                return this.createVideoContent(item);
+            } else {
+                return this.createImageContent(item);
+            }
+        }).join('');
+    }
+
+    createVideoContent(item) {
+        return `
+            <div id="${item.id}" class="slideContent" style="display: none; opacity: 0; transition: opacity ${this.fadeTransitionDuration}ms ease-in-out;">
+                <video class="fade content-de" src="${item.content.de}" muted></video>
+                <video class="fade content-en" src="${item.content.en}" muted></video>
+                <video class="fade content-fr" src="${item.content.fr}" muted></video>
+            </div>`;
+    }
+
+    createImageContent(item) {
+        return `
             <div id="${item.id}" class="slideContent" style="display: none; opacity: 0; transition: opacity ${this.fadeTransitionDuration}ms ease-in-out;">
                 <img src="${item.content.image}" alt="">
                 <img class="fade content-de" src="${item.content.de}" alt="">
                 <img class="fade content-en" src="${item.content.en}" alt="">
                 <img class="fade content-fr" src="${item.content.fr}" alt="">
-            </div>
-        `).join('');
+            </div>`;
     }
-
     checkSchedule() {
         const now = new Date();
         this.activeScheduledContents = [];
@@ -65,6 +82,13 @@ class ContentManager {
     }
 
     async showContent(contentId) {
+        // Pause and reset all videos
+        const allVideos = document.querySelectorAll('.slideContent video');
+        allVideos.forEach(video => {
+            video.pause();
+            video.currentTime = 0;
+        });
+
         // Hide all content with fade
         const allContent = this.schedule.map(item => document.getElementById(item.id));
         allContent.forEach(element => {
@@ -83,6 +107,12 @@ class ContentManager {
             // Trigger reflow to ensure transition works
             newContent.offsetHeight;
             newContent.style.opacity = '1';
+
+            // Start playing videos in new content if any
+            const videos = newContent.querySelectorAll('video');
+            videos.forEach(video => {
+                video.play().catch(e => console.log('Auto-play prevented:', e));
+            });
         }
     }
 

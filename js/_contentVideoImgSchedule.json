@@ -1,0 +1,38 @@
+{
+    "config": {
+      "cycleDuration": 180000
+    },
+    "contents": [
+      {
+        "id": "video-example",
+        "type": "video",
+        "schedule": [
+          {
+            "start": "2025-03-05T00:00:00",
+            "end": "2025-03-20T00:00:00"
+          }
+        ],
+        "content": {
+          "de": "video/example-de.mp4",
+          "en": "video/example-en.mp4",
+          "fr": "video/example-fr.mp4"
+        }
+      },
+      {
+        "id": "image-example",
+        "type": "image",
+        "schedule": [
+          {
+            "start": "2025-03-05T00:00:00",
+            "end": "2025-03-20T00:00:00"
+          }
+        ],
+        "content": {
+          "image": "img/slides/example-image.jpg",
+          "de": "img/slides/example-title-de.svg",
+          "en": "img/slides/example-title-en.svg",
+          "fr": "img/slides/example-title-fr.svg"
+        }
+      }
+    ]
+  }

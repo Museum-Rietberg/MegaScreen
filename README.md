@@ -14,3 +14,6 @@
 - inkl. Zeitplanung (von wann bis wann anzuzeigen)
 ### `indexScheduled.html`
 - Test-Umgebung
+
+### `_dateiname.endung`
+- Dateien mit _[Underscore] beginnend bezeichnen Skizzen
