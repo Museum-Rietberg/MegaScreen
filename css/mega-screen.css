@@ -2,7 +2,9 @@
 box-sizing: border-box;
 
   /*COLORS*/
-  --shopWall-beige: hsla(36, 16%, 61%, 1);
+  /*--shopWall-beige: hsla(36, 16%, 61%, 1); /*v00*/
+  --shopWall-beige: hsla(36, 36%, 61%, 1); /*v01*/
+  /*--shopWall-screenWhite: hsla(0, 0%, 90%, 1);/*TBD*/
 
   /*TYPE-SIZES*/
   --TypeSizes-Large: 48px;
