@@ -203,3 +203,9 @@ h5 {
  top: 0;
  left: 960px;
 }
+
+video {
+  width: 5760px;
+  object-fit: contain;
+  height: 1080px;
+}

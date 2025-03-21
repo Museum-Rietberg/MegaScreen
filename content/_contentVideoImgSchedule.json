@@ -4,18 +4,16 @@
     },
     "contents": [
       {
-        "id": "video-example",
+        "id": "hallyu-teaser",
         "type": "video",
         "schedule": [
           {
-            "start": "2025-03-05T00:00:00",
-            "end": "2025-03-20T00:00:00"
+            "start": "2025-03-19T00:00:00",
+            "end": "2025-03-29T00:00:00"
           }
         ],
         "content": {
-          "de": "content/slides/video/example-de.mp4",
-          "en": "content/slides/video/example-en.mp4",
-          "fr": "content/slides/video/example-fr.mp4"
+          "de": "content/slides/video/MR_HALLYU_T01_1080p_8Mbps_DE.mp4"
         }
       },
       {

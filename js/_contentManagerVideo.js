@@ -116,22 +116,61 @@ class ContentManager {
         }
     }
 
-    cycleContent() {
+    async cycleContent() {
         const hasScheduledContent = this.checkSchedule();
-        
+
         if (hasScheduledContent) {
             // Cycle through active scheduled content
-            this.currentCycleIndex = (this.currentCycleIndex % this.activeScheduledContents.length);
+            this.currentCycleIndex = this.currentCycleIndex % this.activeScheduledContents.length;
             const nextContentId = this.activeScheduledContents[this.currentCycleIndex];
-            this.showContent(nextContentId);
+            await this.showContent(nextContentId);
+
+            // Adjust cycle duration for video content
+            const nextContent = document.getElementById(nextContentId);
+            const video = nextContent?.querySelector('video');
+            if (video) {
+                // Wait for metadata to load to get the duration
+                await new Promise(resolve => {
+                    if (video.readyState >= 1) {
+                        resolve(); // Metadata already loaded
+                    } else {
+                        video.addEventListener('loadedmetadata', resolve, { once: true });
+                    }
+                });
+                this.cycleDuration = Math.ceil(video.duration * 1000); // Convert seconds to milliseconds
+            } else {
+                this.cycleDuration = 180000; // Default to 3 minutes for non-video content
+            }
+
             this.currentCycleIndex++;
         } else {
             // Cycle through all content when no schedule is active
-            this.currentCycleIndex = (this.currentCycleIndex % this.schedule.length);
+            this.currentCycleIndex = this.currentCycleIndex % this.schedule.length;
             const nextContentId = this.schedule[this.currentCycleIndex].id;
-            this.showContent(nextContentId);
+            await this.showContent(nextContentId);
+
+            // Adjust cycle duration for video content
+            const nextContent = document.getElementById(nextContentId);
+            const video = nextContent?.querySelector('video');
+            if (video) {
+                await new Promise(resolve => {
+                    if (video.readyState >= 1) {
+                        resolve();
+                    } else {
+                        video.addEventListener('loadedmetadata', resolve, { once: true });
+                    }
+                });
+                this.cycleDuration = Math.ceil(video.duration * 1000);
+            } else {
+                this.cycleDuration = 180000; // Default to 3 minutes for non-video content
+            }
+
             this.currentCycleIndex++;
         }
+
+        // Restart the content cycle with the updated duration
+        clearInterval(this.cycleInterval);
+        this.cycleInterval = setInterval(() => this.cycleContent(), this.cycleDuration);
     }
 
     startScheduleCheck() {
@@ -141,6 +180,6 @@ class ContentManager {
 
     startContentCycle() {
         this.cycleContent();
-        setInterval(() => this.cycleContent(), this.cycleDuration);
+        this.cycleInterval = setInterval(() => this.cycleContent(), this.cycleDuration);
     }
 }
