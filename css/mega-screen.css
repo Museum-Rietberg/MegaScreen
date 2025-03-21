@@ -33,6 +33,7 @@ align-items: flex-start;
 /*Sections*/
 
 #signage {
+  position: absolute;
   z-index: -1000;
   display: flex;
   width: 7680px;
@@ -202,10 +203,12 @@ h5 {
  position: fixed;
  top: 0;
  left: 960px;
+ z-index: 1;
 }
 
 video {
-  width: 5760px;
-  object-fit: contain;
+  translate: -960px 0; /*making up for fixed position of parent .slideContent*/
+  width: 7680px;
   height: 1080px;
+  object-fit: contain;
 }
