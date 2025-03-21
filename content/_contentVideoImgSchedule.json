@@ -1,0 +1,39 @@
+{
+    "config": {
+      "cycleDuration": 180000
+    },
+    "contents": [
+      {
+        "id": "video-example",
+        "type": "video",
+        "schedule": [
+          {
+            "start": "2025-03-05T00:00:00",
+            "end": "2025-03-20T00:00:00"
+          }
+        ],
+        "content": {
+          "de": "content/slides/video/example-de.mp4",
+          "en": "content/slides/video/example-en.mp4",
+          "fr": "content/slides/video/example-fr.mp4"
+        }
+      },
+      {
+        "id": "image-example",
+        "type": "image",
+        "schedule": [
+          {
+            "start": "2025-03-19T00:00:00",
+            "end": "2025-03-29T00:00:00"
+          }
+        ],
+        "content": {
+          "image": "content/slides/img/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-Background.png",
+          "de": "content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-DE.png",
+          "en": "content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-EN.png",
+          "fr": "content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-FR.png"
+        }
+      }
+    ]
+  }
+

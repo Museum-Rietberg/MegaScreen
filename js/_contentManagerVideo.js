@@ -19,7 +19,7 @@ class ContentManager {
 
     async loadSchedule() {
         try {
-            const response = await fetch('contentSchedule.json');
+            const response = await fetch('content/_contentVideoImgSchedule.json');
             const data = await response.json();
             this.schedule = data.contents;
             this.cycleDuration = data.config?.cycleDuration || this.cycleDuration;

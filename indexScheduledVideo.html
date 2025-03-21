@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="css/mega-screen-animation.css">
 
     <script src="js/languageSwitcher.js"></script>
+    <script src="js/_contentManagerVideo.js"></script>
     
+
   </head>
   <body>
     <main>
@@ -196,28 +198,30 @@
             </div>
           </div>
         </div>
+      </section>
       <section id="changingContent"><div class="slideContent">
-  <img src="content/slides/img/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-Background.png" alt="">
-        <img class="fade content-de" src="content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-DE.png" alt="">
-        <img class="fade content-en" src="content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-EN.png" alt="">
-        <img class="fade content-fr" src="content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-FR.png" alt="">
       </div></section>
-    </section>
-
 </main>
-
 <script>
+  
+
   // Initialize scripts
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', async function() {
+  // Initialize ContentManager first
+  const contentManager = new ContentManager();
+  await contentManager.init(); // Assuming we add an init method that returns a promise
+
+  // Then handle language classes
   const initialElements = document.getElementsByClassName(languages[currentIndex]);
   for (let i = 0; i < initialElements.length; i++) {
     initialElements[i].classList.add('show');
   }
+  
+  // Start language rotation
   setInterval(showNextLanguage, duration);
-  new ContentManager();
 });
-</script>
 
+</script>
   </body>
 
 

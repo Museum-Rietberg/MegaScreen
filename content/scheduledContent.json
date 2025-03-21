@@ -12,10 +12,10 @@
         }
       ],
       "content": {
-        "image": "img/slides/2025-03-11--MegaScreen--Plakat--Day1-01-Image.jpg",
-        "de": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-DE.svg",
-        "en": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-EN.svg",
-        "fr": "img/slides/2025-03-05--MegaScreen--Plakat--Day1-00-Title-FR.svg"
+        "image": "content/slides/img/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-Background.png",
+        "de": "content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-DE.png",
+        "en": "content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-EN.png",
+        "fr": "content/slides/txt/2025-03-18--MegaScreen--4U-HallyuCampaign--2U-LzD--01-FR.png"
       }
     },
     {
