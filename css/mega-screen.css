@@ -2,13 +2,10 @@
 box-sizing: border-box;
 
   /*COLORS*/
-  /*--shopWall-beige: hsla(36, 16%, 61%, 1); /*v00*/
-  /*--shopWall-beige: hsla(36, 36%, 61%, 1); /*v01*/
-  /*--shopWall-beige: hsla(40, 36%, 65%, 1); /*v02 */
-  --shopWall-beige: hsla(40, 30%, 65%, 1); /*v03*/
-  /*--shopWall-screenWhite: hsla(0, 0%, 90%, 1);/*TBC*/
+  --shopWall-beige: hsla(40, 30%, 65%, 1);
+  --shopWall-screenWhite: hsla(0, 0%, 90%, 1);
 
-  /*TYPE-SIZES*/
+  /*TYPE-SIZES*/ 
   --TypeSizes-Large: 48px;
   --TypeSizes-Normal: 24px;
   --LetterSpacing-Wide: 2px;
