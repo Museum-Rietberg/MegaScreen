@@ -6,7 +6,7 @@
 ### `contentManager.js`
 - lädt alle 3 Minuten den nächsten aktuellen Inhalt aus `contentSchedule.json` 
 - mit Überblendung via `element.style.display` und `element.style.opacity`
-### `languageSwither.js`
+### `languageSwitcher.js`
 - wechselt jede Minute die Sprache des gesamten angezeigten Inhalts 
 - via CSS-Klassen `content-de`, `content-en`, `content-fr`
 ### `contentSchedule.json`
