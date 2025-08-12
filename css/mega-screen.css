@@ -9,6 +9,7 @@ box-sizing: border-box;
   --TypeSizes-Large: 48px;
   --TypeSizes-Normal: 24px;
   --LetterSpacing-Wide: 2px;
+  --LetterSpacing-Narrow: 0px;
 }
 
 * {
@@ -56,10 +57,12 @@ align-items: flex-start;
   font-family: "Akkurat";
   font-size: var(--TypeSizes-Large, 48px);
   font-style: normal;
-  font-weight: 400;
+  /* font-weight: 400; */
+  font-weight: 700;
   line-height: var(--TypeSizes-Large, 48px); /* 100% */
-  letter-spacing: var(--LetterSpacing-Wide, 2px);
-  text-transform: uppercase;
+  letter-spacing: var(--LetterSpacing-Narrow, 0px);
+  /* letter-spacing: var(--LetterSpacing-Wide, 2px); */
+  /* text-transform: uppercase; */
 }
 
 h5 {
