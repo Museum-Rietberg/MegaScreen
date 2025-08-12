@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/mega-screen-animation.css">
 
     <script src="js/languageSwitcher.js"></script>
+    <script src="js/contentCycler.js"></script>
     
   </head>
   <body>
@@ -225,13 +226,38 @@
         </div>
       </section>
       <section id="changingContent">
-        <div class="slideContent">
-        <img src="content/slides/img/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-Background.png" alt="">
-        <img class="fade content-de" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-DE.png" alt="">
-        <img class="fade content-en" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-EN.png" alt="">
-        <img class="fade content-fr" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-FR.png" alt="">
-      </div>
-    </section>
+        <!-- Slide 1 -->
+        <div class="slideContent slide-1">
+          <img src="content/slides/img/2025-08-12-JdL-8U-PLACEHOLDER.jpg" alt="">
+          <!-- <img class="fade content-de" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-DE.png" alt="">
+          <img class="fade content-en" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-EN.png" alt="">
+          <img class="fade content-fr" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-01-FR.png" alt=""> -->
+        </div>
+        
+        <!-- Slide 2 - Add your second slide content here -->
+        <div class="slideContent slide-2">
+          <img src="content/slides/img/2025-08-12-MON-8U-PLACEHOLDER.jpg" alt="">
+          <!-- <img class="fade content-de" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-02-DE.png" alt="">
+          <img class="fade content-en" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-02-EN.png" alt="">
+          <img class="fade content-fr" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-02-FR.png" alt=""> -->
+        </div>
+        
+        <!-- Slide 3 - Add your third slide content here -->
+        <!-- <div class="slideContent slide-3">
+          <img src="content/slides/img/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-03-Background.png" alt="">
+          <img class="fade content-de" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-03-DE.png" alt="">
+          <img class="fade content-en" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-03-EN.png" alt="">
+          <img class="fade content-fr" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-03-FR.png" alt="">
+        </div> -->
+        
+        <!-- Slide 4 - Add your fourth slide content here -->
+        <!-- <div class="slideContent slide-4">
+          <img src="content/slides/img/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-04-Background.png" alt="">
+          <img class="fade content-de" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-04-DE.png" alt="">
+          <img class="fade content-en" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-04-EN.png" alt="">
+          <img class="fade content-fr" src="content/slides/txt/2025-07-01--MegaScreen--7U-Hallyu--1U-MediaGuide-04-FR.png" alt="">
+        </div> -->
+      </section>
   
 
 </main>
@@ -239,12 +265,15 @@
 <script>
   // Initialize scripts
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize language switching
   const initialElements = document.getElementsByClassName(languages[currentIndex]);
   for (let i = 0; i < initialElements.length; i++) {
     initialElements[i].classList.add('show');
   }
   setInterval(showNextLanguage, duration);
-  new ContentManager();
+  
+  // Initialize content cycling
+  initContentCycling();
 });
 </script>
 

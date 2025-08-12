@@ -16,4 +16,19 @@
     position: absolute;
     top: 0;
     right: 0;
-  }  
+  }
+
+  /* Content slide cycling animations */
+  .slideContent {
+    position: absolute;
+    top: 0;
+    left: 960px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+  
+  .slideContent.show {
+    opacity: 1;
+    z-index: 1;
+  }
